@@ -1,25 +1,29 @@
 <mvc:View
 	controllerName="apnv.dev.controller.Main"
-	displayBlock="true"
-	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc"
-	xmlns:core="sap.ui.core"
-	core:require="{
-		formatter: 'apnv/dev/model/formatter'
-	}">
+	xmlns="sap.f"
+	xmlns:m="sap.m"
+	xmlns:layout= "sap.ui.layout"
+	height="100%">
 
-	<MessagePage
-		title="{i18n>appTitle}"
-		text="{i18n>appTitle}"
-		icon="sap-icon://accept"
-		id="page"
-		description="{i18n>appDescription}">
-		<buttons>
-			<Button
-				id="helloButton"
-				text="{formatter: 'formatter.formatValue', path: 'i18n>btnText'}"
-				press="sayHello" />
-		</buttons>
-	</MessagePage>
+		<ShellBar
+			title="Application Title"
+			secondTitle="Short description"
+			homeIcon="./resources/sap/ui/documentation/sdk/images/logo_ui5.png"
+			showCopilot="true"
+			showSearch="true"
+			showNotifications="true"
+			showProductSwitcher="true"
+			notificationsNumber="2">
+		<menu>
+			<m:Menu>
+				<m:MenuItem text="Flight booking" icon="sap-icon://flight" />
+				<m:MenuItem text="Car rental" icon="sap-icon://car-rental" />
+			</m:Menu>
+		</menu>
+		<profile>
+			<m:Avatar initials="UI"/>
+		</profile>
+	</ShellBar>
 
 </mvc:View>
