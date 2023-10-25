@@ -1,0 +1,17 @@
+{
+  "generator-ui5-ts-app": {
+    "namespace": "apnv.dev",
+    "framework": "OpenUI5",
+    "frameworkVersion": "1.119.1",
+    "author": "ariefp",
+    "initrepo": true,
+    "tstypes": "@openui5/types",
+    "tstypesVersion": "1.119.1",
+    "appId": "apnv.dev",
+    "appURI": "apnv/dev",
+    "cdnDomain": "sdk.openui5.org",
+    "defaultTheme": "sap_horizon",
+    "gte11150": true,
+    "setupCompleted": true
+  }
+}
