@@ -12,6 +12,7 @@ framework:
     - name: sap.ui.layout
     - name: sap.ui.webc.main
     - name: sap.ui.webc.fiori
+    - name: sap.tnt
     - name: themelib_sap_horizon
 builder:
   customTasks:

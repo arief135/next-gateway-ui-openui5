@@ -34,7 +34,8 @@
 				"sap.m": {},
 				"sap.ui.layout": {},
 				"sap.ui.webc.main": {},
-				"sap.ui.webc.fiori": {}
+				"sap.ui.webc.fiori": {},
+				"sap.tnt": {}
 			}
 		},
 		"handleValidation": true,
