@@ -24,3 +24,10 @@ server:
       afterMiddleware: compression
     - name: ui5-middleware-livereload
       afterMiddleware: compression
+    - name: ui5-middleware-route-proxy
+      afterMiddleware: compression
+      configuration:
+        ignoreCertError: true # If set to true, certificate errors will be ignored. E.g. self-signed certificates will be accepted
+        /api:
+          target: http://localhost:3000
+          auth: false
