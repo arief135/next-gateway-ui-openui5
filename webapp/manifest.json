@@ -65,12 +65,21 @@
 					"pattern": "",
 					"name": "main",
 					"target": "main"
+				},
+				{
+					"pattern": "/login",
+					"name": "login",
+					"target": "login"
 				}
 			],
 			"targets": {
 				"main": {
 					"viewId": "main",
 					"viewName": "Main"
+				},
+				"login": {
+					"viewId": "login",
+					"viewName": "Login"
 				}
 			}
 		}

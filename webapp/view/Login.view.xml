@@ -1,0 +1,43 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+    xmlns="sap.m"
+    height="100%"
+>
+    <FlexBox
+        height="100%"
+        alignItems="Center"
+        justifyContent="Center"
+    >
+        <Panel
+            headerText="Sign In"
+            width="300px"
+            height="200px"
+        >
+            <FlexBox
+                height="100%"
+                direction="Column"
+                justifyContent="Center"
+            >
+                <Label
+                    text="User Name"
+                    labelFor="userNameInput"
+                />
+                <Input
+                    id="userNameInput"
+                    type="Text"
+                    placeholder="Enter User Name"
+                />
+                <Label
+                    text="Password"
+                    labelFor="passwordInput"
+                />
+                <Input
+                    id="passwordInput"
+                    type="Password"
+                    placeholder="Enter Password"
+                />
+            </FlexBox>
+        </Panel>
+    </FlexBox>
+</mvc:View>

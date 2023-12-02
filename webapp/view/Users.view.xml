@@ -1,0 +1,6 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc">
+    <Text
+        xmlns="sap.m"
+        text="This is the user page"
+    />
+</mvc:View>
