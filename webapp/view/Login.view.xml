@@ -3,6 +3,7 @@
     xmlns:l="sap.ui.layout"
     xmlns="sap.m"
     height="100%"
+    controllerName="apnv.dev.controller.Login"
 >
     <FlexBox
         height="100%"
@@ -36,6 +37,12 @@
                     id="passwordInput"
                     type="Password"
                     placeholder="Enter Password"
+                />
+
+                <Button
+                    text="{i18n>LoginButtonText}"
+                    press="onLoginPress"
+                    type="Emphasized"
                 />
             </FlexBox>
         </Panel>

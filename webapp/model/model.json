@@ -16,6 +16,11 @@
         {
             "title": "Github",
             "icon": "sap-icon://source-code"
+        },
+        {
+            "title": "Logoff",
+            "icon": "sap-icon://log",
+            "key": "logoff"
         }
     ]
 }

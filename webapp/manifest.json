@@ -67,7 +67,7 @@
 					"target": "main"
 				},
 				{
-					"pattern": "/login",
+					"pattern": "login",
 					"name": "login",
 					"target": "login"
 				}
