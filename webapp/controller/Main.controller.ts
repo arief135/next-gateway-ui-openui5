@@ -10,7 +10,7 @@ import { logout } from "../util/Auth";
  */
 export default class Main extends BaseController {
 
-	oModel: JSONModel;
+	private oModel: JSONModel;
 
 	public onInit() {
 		this.oModel = new JSONModel();

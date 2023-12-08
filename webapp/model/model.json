@@ -2,7 +2,7 @@
     "selectedKey": "page2",
     "navigation": [
         {
-            "title": "Proxy",
+            "title": "API Proxy",
             "icon": "sap-icon://internet-browser",
             "key": "proxy"
         },
