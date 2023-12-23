@@ -33,6 +33,7 @@
 		"rimraf": "^5.0.5",
 		"typescript": "^5.2.2",
 		"ui5-middleware-livereload": "^3.0.1",
+		"ui5-middleware-route-proxy": "^1.0.10",
 		"ui5-tooling-transpile": "^3.2.5"
 	}
 }

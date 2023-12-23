@@ -1,25 +1,63 @@
 <mvc:View
-	controllerName="apnv.dev.controller.Main"
-	displayBlock="true"
-	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc"
-	xmlns:core="sap.ui.core"
-	core:require="{
-		formatter: 'apnv/dev/model/formatter'
-	}">
-
-	<MessagePage
-		title="{i18n>appTitle}"
-		text="{i18n>appTitle}"
-		icon="sap-icon://accept"
-		id="page"
-		description="{i18n>appDescription}">
-		<buttons>
-			<Button
-				id="helloButton"
-				text="{formatter: 'formatter.formatValue', path: 'i18n>btnText'}"
-				press="sayHello" />
-		</buttons>
-	</MessagePage>
-
+    height="100%"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:core="sap.ui.core"
+    xmlns:tnt="sap.tnt"
+    controllerName="apnv.dev.controller.Main"
+>
+    <tnt:ToolPage id="toolPage">
+        <tnt:header>
+            <f:ShellBar
+                title="NEXT Gateway"
+                secondTitle="Administration"
+                showMenuButton="true"
+                homeIcon="./images/logo_ui5.png"
+                showCopilot="false"
+                showNotifications="false"
+                menuButtonPressed="onMenuButtonPress"
+                showProductSwitcher="false"
+            >
+                <f:profile>
+                    <Avatar initials="UI" />
+                </f:profile>
+            </f:ShellBar>
+        </tnt:header>
+        <tnt:sideContent>
+            <core:Fragment
+                fragmentName="apnv.dev.view.SideNavigation"
+                type="XML"
+            />
+        </tnt:sideContent>
+        <tnt:mainContents>
+            <NavContainer
+                id="pageContainer"
+                initialPage="page2"
+            >
+                <pages>
+                    <ScrollContainer
+                        id="proxy"
+                        horizontal="false"
+                        vertical="true"
+                        height="100%"
+                    >
+                        <mvc:XMLView
+                            viewName="apnv.dev.view.Proxy"
+                        />
+                    </ScrollContainer>
+                    <ScrollContainer
+                        id="users"
+                        horizontal="false"
+                        vertical="true"
+                        height="100%"
+                    >
+                        <mvc:XMLView
+                            viewName="apnv.dev.view.Users"
+                        />
+                    </ScrollContainer>
+                </pages>
+            </NavContainer>
+        </tnt:mainContents>
+    </tnt:ToolPage>
 </mvc:View>

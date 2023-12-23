@@ -1,0 +1,19 @@
+{
+    "data": [
+        {
+            "uuid": "61293dbf-41dc-4415-ac8c-b56e9d7a9870",
+            "name": "SAMPLE",
+            "alias": "sample",
+            "targetURL": "http://localhost:3000/api",
+            "status": "ACTIVE",
+            "credentialId": 1,
+            "lastModifiedOn": "2023-11-02T03:22:45.203Z",
+            "lastModifiedBy": "SYSTEM",
+            "credentialInfo": {
+                "id": 1,
+                "credentialType": 1
+            },
+            "credentialProperties": []
+        }
+    ]
+}

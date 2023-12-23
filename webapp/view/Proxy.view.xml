@@ -1,0 +1,124 @@
+<mvc:View
+    controllerName="apnv.dev.controller.Proxy"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:layout="sap.ui.layout"
+    height="100%"
+>
+    <f:DynamicPage
+        id="dynamicPageId"
+        headerExpanded="true"
+        toggleHeaderOnTitleClick="false"
+        headerPinned="false"
+    >
+        <!-- DynamicPage Title -->
+        <f:title>
+            <f:DynamicPageTitle>
+                <f:heading>
+                    <Title text="{i18n>APIProxy}" />
+                </f:heading>
+                <f:breadcrumbs>
+                    <Breadcrumbs currentLocationText="{i18n>APIProxy}">
+                        <Link text="Home" />
+                    </Breadcrumbs>
+                </f:breadcrumbs>
+                <f:actions>
+                    <Button
+                        text="Create New"
+                        type="Emphasized"
+                        press="toggleAreaPriority"
+                    />
+                </f:actions>
+            </f:DynamicPageTitle>
+        </f:title>
+        <!-- DynamicPage Header -->
+        <f:header>
+            <f:DynamicPageHeader pinnable="false">
+                <layout:HorizontalLayout allowWrapping="true">
+                    <layout:VerticalLayout class="sapUiMediumMarginEnd">
+                        <ObjectAttribute
+                            title="Active"
+                            text="0"
+                        />
+                    </layout:VerticalLayout>
+                </layout:HorizontalLayout>
+            </f:DynamicPageHeader>
+        </f:header>
+        <f:content>
+            <Table
+                id="idProductsTable"
+                sticky="HeaderToolbar,ColumnHeaders"
+                inset="false"
+                items="{
+							path: '/data',
+							sorter: {
+								path: 'Name'
+							}
+						}"
+                class="sapFDynamicPageAlignContent"
+                width="auto"
+            >
+                <headerToolbar>
+                    <Toolbar>
+                        <Title
+                            text="API Proxy List"
+                            level="H2"
+                        />
+                    </Toolbar>
+                </headerToolbar>
+                <columns>
+                    <Column width="12em">
+                        <Text text="Name" />
+                    </Column>
+                    <Column
+                        minScreenWidth="Tablet"
+                        demandPopin="true"
+                    >
+                        <Text text="Alias" />
+                    </Column>
+                    <Column
+                        minScreenWidth="Tablet"
+                        demandPopin="true"
+                    >
+                        <Text text="Target URL" />
+                    </Column>
+                    <Column>
+                        <Text text="Status" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{name}" />
+                            <Text text="{alias}" />
+                            <Text text="{targetURL}" />
+                            <Text text="{status}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </f:content>
+        <!-- DynamicPage Footer -->
+        <f:footer>
+            <OverflowToolbar>
+                <Button
+                    icon="sap-icon://message-popup"
+                    text="{/messagesLength}"
+                    type="Emphasized"
+                    press="onMessageButtonPress"
+                    visible="{= !!${/messagesLength}}"
+                />
+                <ToolbarSpacer />
+                <Button
+                    type="Accept"
+                    text="Accept"
+                />
+                <Button
+                    type="Reject"
+                    text="Reject"
+                />
+            </OverflowToolbar>
+        </f:footer>
+    </f:DynamicPage>
+</mvc:View>

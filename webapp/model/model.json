@@ -1,0 +1,26 @@
+{
+    "selectedKey": "page2",
+    "navigation": [
+        {
+            "title": "API Proxy",
+            "icon": "sap-icon://internet-browser",
+            "key": "proxy"
+        },
+        {
+            "title": "Users",
+            "icon": "sap-icon://person-placeholder",
+            "key": "users"
+        }
+    ],
+    "fixedNavigation": [
+        {
+            "title": "Github",
+            "icon": "sap-icon://source-code"
+        },
+        {
+            "title": "Logoff",
+            "icon": "sap-icon://log",
+            "key": "logoff"
+        }
+    ]
+}
